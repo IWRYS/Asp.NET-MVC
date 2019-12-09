@@ -1,0 +1,31 @@
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace WebTrainingMVC.BindingModels.ContragentBindingModels
+{
+    public class AddContragentBindingModel
+    {
+        [Required]
+        [MaxLength(50)]
+        [RegularExpression(@"^[a-zA-Z0-9'' ']+$")]
+        [DisplayName("Contragent Name")]
+        public string ContragentName { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string Adress { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        //[RegularExpression(@"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}")]
+        public string Email { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string VatNumber { get; set; }
+
+        [Required]
+        [Range(0, int.MaxValue)]
+        public int UserId { get; set; }
+    }
+}

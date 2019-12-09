@@ -1,0 +1,10 @@
+*/bin/*
+bin/*
+
+*/obj/*
+obj/*
+packages/*
+
+*.sln
+
+

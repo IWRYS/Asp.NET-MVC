@@ -1,0 +1,19 @@
+﻿
+
+@if (@Model.Valid == "VALID")
+{
+    <h2 align="center">Client Info:</h2>
+
+    <div align="center">
+        <label>Name:</label>
+        <label>@Model.Name</label>
+    </div>
+    <div align="center">
+        <label>Adress:</label>
+        <label>@Model.Adress</label>
+    </div>
+}
+else
+{
+    <h5 align="center">No data found with that Vat Number.</h5>
+}

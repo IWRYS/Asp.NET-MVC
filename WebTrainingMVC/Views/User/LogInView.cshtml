@@ -1,0 +1,29 @@
+﻿@model WebTrainingMVC.Models.UserViewByUserAndPassword
+@{
+
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Log In</h2>
+
+@using (Html.BeginForm("userLogIn", "user", FormMethod.Post))
+{
+
+    <div>
+        <label>User</label>
+        @Html.TextBoxFor(model => model.Username)
+    </div>
+
+    <div>
+        <label>Password</label>
+        @*@Html.TextBoxFor(model => model.Password)*@
+
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password" })
+    </div>
+
+    <button type="submit">Log In</button>
+}
+
+<h5>@ViewBag.Title</h5>

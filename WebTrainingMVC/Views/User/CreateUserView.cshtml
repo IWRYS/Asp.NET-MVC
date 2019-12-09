@@ -1,0 +1,27 @@
+﻿@model WebTrainingMVC.Models.CreateUserResultModel
+
+
+@{
+    ViewBag.Title = "CreateUserView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create User</h2>
+
+
+
+@using (Html.BeginForm("CreateUser", "user", FormMethod.Post))
+{
+
+   <div>
+       <label>User</label>
+    @Html.TextBoxFor(model => model.Username)
+   </div>
+
+   <div>
+       <label>Password</label>
+       @Html.TextBoxFor(model => model.Password)
+   </div>
+
+    <button type="submit">Submit</button>
+}
